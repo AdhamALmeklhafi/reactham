@@ -45,6 +45,9 @@ importers:
       '@react-router/dev':
         specifier: ^7.1.5
         version: 7.1.5(@react-router/serve@7.1.5(react-router@7.1.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.7.3))(@types/node@20.17.19)(babel-plugin-macros@3.1.0)(lightningcss@1.29.1)(react-router@7.1.5(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(typescript@5.7.3)(vite@5.4.14(@types/node@20.17.19)(lightningcss@1.29.1))
+      '@tailwindcss/postcss':
+        specifier: ^4.0.6
+        version: 4.0.6
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.0.6(vite@5.4.14(@types/node@20.17.19)(lightningcss@1.29.1))
@@ -80,6 +83,10 @@ importers:
         version: 5.1.4(typescript@5.7.3)(vite@5.4.14(@types/node@20.17.19)(lightningcss@1.29.1))
 
 packages:
+
+  '@alloc/quick-lru@5.2.0':
+    resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
+    engines: {node: '>=10'}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -968,6 +975,9 @@ packages:
   '@tailwindcss/oxide@4.0.6':
     resolution: {integrity: sha512-lVyKV2y58UE9CeKVcYykULe9QaE1dtKdxDEdrTPIdbzRgBk6bdxHNAoDqvcqXbIGXubn3VOl1O/CFF77v/EqSA==}
     engines: {node: '>= 10'}
+
+  '@tailwindcss/postcss@4.0.6':
+    resolution: {integrity: sha512-noTaGPHjGCXTCc487TWnfAEN0VMjqDAecssWDOsfxV2hFrcZR0AHthX7IdY/0xHTg/EtpmIPdssddlZ5/B7JnQ==}
 
   '@tailwindcss/vite@4.0.6':
     resolution: {integrity: sha512-O25vZ/URWbZ2JHdk2o8wH7jOKqEGCsYmX3GwGmYS5DjE4X3mpf93a72Rn7VRnefldNauBzr5z2hfZptmBNtTUQ==}
@@ -2365,6 +2375,8 @@ packages:
 
 snapshots:
 
+  '@alloc/quick-lru@5.2.0': {}
+
   '@ampproject/remapping@2.3.0':
     dependencies:
       '@jridgewell/gen-mapping': 0.3.8
@@ -3242,6 +3254,15 @@ snapshots:
       '@tailwindcss/oxide-linux-x64-musl': 4.0.6
       '@tailwindcss/oxide-win32-arm64-msvc': 4.0.6
       '@tailwindcss/oxide-win32-x64-msvc': 4.0.6
+
+  '@tailwindcss/postcss@4.0.6':
+    dependencies:
+      '@alloc/quick-lru': 5.2.0
+      '@tailwindcss/node': 4.0.6
+      '@tailwindcss/oxide': 4.0.6
+      lightningcss: 1.29.1
+      postcss: 8.5.2
+      tailwindcss: 4.0.6
 
   '@tailwindcss/vite@4.0.6(vite@5.4.14(@types/node@20.17.19)(lightningcss@1.29.1))':
     dependencies:
