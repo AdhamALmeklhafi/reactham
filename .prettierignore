@@ -1,0 +1,12 @@
+# .prettierignore
+node_modules/
+dist/
+build/
+*.lock
+*.svg
+*.json
+*.md
+*.yaml
+*.config*
+*.txt
+*.css

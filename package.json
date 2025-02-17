@@ -6,7 +6,10 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "format": "prettier --write .", 
+    "lint": "eslint .", 
+    "lint:fix": "eslint . --fix" 
   },
   "dependencies": {
     "@react-router/fs-routes": "^7.1.5",
@@ -23,6 +26,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@eslint/js": "^9.20.0",
     "@react-router/dev": "^7.1.5",
     "@tailwindcss/postcss": "^4.0.6",
     "@tailwindcss/vite": "^4.0.0",
@@ -30,10 +34,19 @@
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
     "autoprefixer": "^10.4.20",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.15.0",
     "postcss": "^8.5.2",
+    "prettier": "^3.5.1",
     "react-router-devtools": "^1.1.0",
     "tailwindcss": "^4.0.6",
     "typescript": "^5.7.2",
+    "typescript-eslint": "^8.24.1",
     "vite": "^5.4.11",
     "vite-tsconfig-paths": "^5.1.4"
   }
