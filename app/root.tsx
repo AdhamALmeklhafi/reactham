@@ -11,6 +11,11 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import type { Route } from "./+types/root";
 import "./app.css";
 import { queryClient } from "./lib/react-query";
+import { Trans } from "@lingui/react/macro";
+import { I18nProvider } from "@lingui/react";
+import { i18n } from "@lingui/core";
+import LanguageSwitcher from "./components/LanguageSwitcher";
+import { loadLocale } from "./lib/i18n";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -35,6 +40,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <nav className="absolute top-4 right-4">
+          <LanguageSwitcher />
+        </nav>
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -43,12 +51,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+export const clientLoader = () => {
+  const locale = localStorage.getItem("locale") || "en";
+  loadLocale(locale);
+};
+
 export default function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <Outlet />
-      <ReactQueryDevtools initialIsOpen={true} />
-    </QueryClientProvider>
+    <I18nProvider i18n={i18n}>
+      <QueryClientProvider client={queryClient}>
+        <Trans>Hello</Trans>
+        <Outlet />
+        <ReactQueryDevtools initialIsOpen={true} />
+      </QueryClientProvider>
+    </I18nProvider>
   );
 }
 
