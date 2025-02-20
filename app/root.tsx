@@ -16,6 +16,7 @@ import { I18nProvider } from "@lingui/react";
 import { i18n } from "@lingui/core";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import { loadLocale } from "./lib/i18n";
+import ThemeToggle from "./components/ThemeToggle";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -42,6 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <nav className="absolute top-4 right-4">
           <LanguageSwitcher />
+          <ThemeToggle />
         </nav>
         {children}
         <ScrollRestoration />
@@ -60,7 +62,9 @@ export default function App() {
   return (
     <I18nProvider i18n={i18n}>
       <QueryClientProvider client={queryClient}>
-        <Trans>Hello</Trans>
+        <div className="h-screen">
+          <Trans>Hello</Trans>
+        </div>
         <Outlet />
         <ReactQueryDevtools initialIsOpen={true} />
       </QueryClientProvider>
