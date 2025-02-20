@@ -1,5 +1,4 @@
 import React from "react";
-import { i18n } from "@lingui/core";
 import { loadLocale } from "../lib/i18n";
 
 const locales: { [key: string]: { direction: string } } = {
