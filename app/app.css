@@ -5,8 +5,15 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: "Modulus Pro", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@font-face {
+  font-family: 'Modulus Pro';
+  src: url('/app/assets/fonts/modulus-pro-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html,
@@ -16,6 +23,10 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+}
+
+body {
+  font-family: 'Modulus Pro', sans-serif;
 }
 
 :root {
