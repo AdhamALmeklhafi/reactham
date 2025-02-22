@@ -5,6 +5,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import babelMacros from "vite-plugin-babel-macros";
 import { lingui } from '@lingui/vite-plugin';
 import AutoImport from 'unplugin-auto-import/vite';
+import { imagetools } from 'vite-imagetools'
+
 
 export default defineConfig({
   plugins: [
@@ -13,6 +15,7 @@ export default defineConfig({
     reactRouter(),
     tsconfigPaths(),
     lingui(),
+    imagetools(),
     AutoImport({
       imports: [
         'react',
