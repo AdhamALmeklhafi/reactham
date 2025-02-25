@@ -13,6 +13,67 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#. placeholder {0}: new Date().getFullYear()
+#: app/routes/_index.tsx:150
+msgid "© {0} Reactham. MIT License."
+msgstr ""
+
+#: app/routes/_index.tsx:84
+msgid "A meticulously crafted template for building production-grade applications with TypeScript, React Router, and modern tooling."
+msgstr ""
+
+#: app/routes/_index.tsx:159
+msgid "Changelog"
+msgstr ""
+
+#: app/routes/_index.tsx:19
+msgid "Clean separation of client/server concerns with SSR support"
+msgstr ""
+
+#: app/routes/_index.tsx:80
+msgid "Enterprise Ready Foundation"
+msgstr ""
+
+#: app/routes/_index.tsx:40
+msgid "Full TypeScript integration with strict checks"
+msgstr ""
+
+#: app/routes/_index.tsx:91
+msgid "Get Started"
+msgstr ""
+
+#: app/routes/_index.tsx:33
+msgid "Git Ready"
+msgstr ""
+
+#: app/routes/_index.tsx:167
+msgid "GitHub"
+msgstr ""
+
 #: app/root.tsx:63
-msgid "Hello"
-msgstr "مرحبا"
+#~ msgid "Hello"
+#~ msgstr "مرحبا"
+
+#: app/routes/_index.tsx:17
+msgid "Modular Architecture"
+msgstr ""
+
+#: app/routes/_index.tsx:28
+msgid "Optimized builds with Tree-shaking & Code splitting"
+msgstr ""
+
+#: app/routes/_index.tsx:34
+msgid "Pre-configured hooks and commit conventions"
+msgstr ""
+
+#: app/routes/_index.tsx:26
+msgid "Production Grade"
+msgstr ""
+
+#: app/routes/_index.tsx:38
+msgid "Type Safe"
+msgstr ""
+
+#: app/routes/_index.tsx:100
+msgid "View on GitHub"
+msgstr ""
