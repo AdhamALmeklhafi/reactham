@@ -29,6 +29,7 @@ body {
   font-family: 'Modulus Pro', sans-serif;
 }
 
+
 :root {
   --background: hsl(0 0% 100%);
   --foreground: hsl(240 10% 3.9%);
@@ -122,4 +123,67 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes gradient-flow {
+  from { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  to { background-position: 0% 50%; }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+  50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+}
+
+@layer utilities {
+  .animate-gradient-flow {
+    animation: gradient-flow 6s ease infinite;
+    background-size: 200% 200%;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+  
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 2.5px;
+  height: 2.5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F5FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C1C1C1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A8A8;
 }

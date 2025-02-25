@@ -7,25 +7,25 @@ const locales: { [key: string]: { direction: string } } = {
 };
 
 const LanguageSwitcher: React.FC = () => {
-  const changeLanguage = async (newLang: string) => {
-    const localeValue = !newLang || !locales[newLang] ? "en" : newLang;
-    await loadLocale(localeValue);
-  };
+  const [currentLang, setCurrentLang] = React.useState("en");
 
   return (
-    <div className="flex gap-2">
-      <button
-        onClick={() => changeLanguage("en")}
-        className={i18n.locale === "en" ? "font-bold" : ""}
-      >
-        EN
-      </button>
-      <button
-        onClick={() => changeLanguage("ar")}
-        className={i18n.locale === "ar" ? "font-bold" : ""}
-      >
-        AR
-      </button>
+    <div className="">
+      {Object.keys(locales)
+        .filter((lang) => lang !== currentLang)
+        .map((lang) => (
+          <button
+            key={lang}
+            onClick={async () => {
+              const localeValue = !lang || !locales[lang] ? "en" : lang;
+              await loadLocale(localeValue);
+              setCurrentLang(localeValue);
+            }}
+            className="hover:underline font-bold"
+          >
+            {lang.toUpperCase()}
+          </button>
+        ))}
     </div>
   );
 };
